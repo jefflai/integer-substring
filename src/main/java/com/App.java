@@ -11,9 +11,4 @@ public class App {
         return Integer.parseInt(integerBuffer.toString().substring(index, index + length));
     }
     
-    public static int integerSubstringBruteForceTwo(int index, int length) {
-        int currentNumber = 1;
-        int currentIndex = 
-        
-    }
 }
