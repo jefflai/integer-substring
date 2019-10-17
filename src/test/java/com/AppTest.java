@@ -15,14 +15,19 @@ public class AppTest {
     
     @Parameters
     public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] { { 0, 1, 1 }, { 3, 5, 45678}, {30, 5, 2122}, {100, 3, 556}});
+        return Arrays.asList(new Object[][] {
+                        {0, 1, "1"},
+                        {3, 5, "45678"},
+                        {30, 5, "02122"},
+                        {100, 3, "556"}
+                });
     }
     
     private int index;
     private int length;
-    private int expected;
+    private String expected;
     
-    public AppTest(int index, int length, int expected) {
+    public AppTest(int index, int length, String expected) {
         this.index = index;
         this.length = length;
         this.expected = expected;
@@ -34,8 +39,8 @@ public class AppTest {
     }
     
     @Test
-    public void integerSubstring() {
-        assertEquals(expected, App.integerSubstringBruteForceTwo(index, length));
+    public void integerPartial() {
+        assertEquals(expected, App.integerSubstringPartialNumberString(index, length));
     }
     
 }
